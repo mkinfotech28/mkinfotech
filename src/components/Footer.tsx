@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import logo from "../assets/logo2.png";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
               <div className="flex items-center space-x-2 mb-1">
                 <div className="w-24 h-24 rounded-lg flex items-center justify-center">
                   <img
-                    src="src/assets/logo2.png"
+                    src={logo}
                     alt="MK Infotech"
                     className="w-24 h-24 rounded-lg"
                   />

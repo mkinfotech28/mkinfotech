@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import logo from "../assets/logo.jpeg";
 
 const Header = () => {
   const scrollToSection = (sectionId: string) => {
@@ -12,7 +13,7 @@ const Header = () => {
         <div className="flex items-center space-x-2">
           <div className="w-16 h-16  rounded-lg flex items-center justify-center">
             <img
-              src="src/assets/logo.jpeg"
+              src={logo}
               alt="MK Infotech"
               className="w-16 h-16 rounded-lg"
             />
