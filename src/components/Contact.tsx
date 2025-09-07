@@ -1,13 +1,48 @@
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
+const SERVICE_ID = "service_8byqbl9";
+const TEMPLATE_ID = "template_yfbl6ki";
+const PUBLIC_KEY = "r_hSNlKUbLELWyBT-";
+
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted");
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm();
+
+  const [loading, setLoading] = useState(false);
+
+  const onSubmit = async (data: any) => {
+    setLoading(true);
+
+    const formattedData = {
+      firstName: data.firstName || "--",
+      lastName: data.lastName || "--",
+      email: data.email || "--",
+      company: data.company || "--",
+      service: data.service || "--",
+      message: data.message || "--",
+    };
+
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, formattedData, PUBLIC_KEY);
+      toast("Message sent successfully!", { type: "success" });
+      reset();
+    } catch (error) {
+      console.error("Email sending error:", error);
+      toast("Failed to send message.", { type: "error" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -44,7 +79,6 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground mb-1">
                       Email Us
                     </h4>
-
                     <p className="text-muted-foreground">
                       mkinfotech28@gmail.com
                     </p>
@@ -71,9 +105,6 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground mb-1">
                       Visit Us
                     </h4>
-                    {/* <p className="text-muted-foreground">
-                      123 Technology Street
-                    </p> */}
                     <p className="text-muted-foreground">
                       Amritsar, Punjab, India - 143001
                     </p>
@@ -95,12 +126,6 @@ const Contact = () => {
                   developers are always at your service to assist you with the
                   years of experience.
                 </div>
-                {/* <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>✓ Expert team with 5+ years experience</li>
-                  <li>✓ 24/7 support and maintenance</li>
-                  <li>✓ Competitive pricing and flexible terms</li>
-                  <li>✓ Proven track record of successful projects</li>
-                </ul> */}
               </div>
             </div>
 
@@ -109,7 +134,7 @@ const Contact = () => {
                 Send us a Message
               </h3>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label
@@ -118,8 +143,20 @@ const Contact = () => {
                     >
                       First Name
                     </label>
-                    <Input id="firstName" placeholder="John" required />
+                    <Input
+                      id="firstName"
+                      placeholder="John"
+                      {...register("firstName", {
+                        required: "First Name is required",
+                      })}
+                    />
+                    {errors.firstName && (
+                      <p className="text-red-500 text-sm">
+                        {errors.firstName.message}
+                      </p>
+                    )}
                   </div>
+
                   <div>
                     <label
                       htmlFor="lastName"
@@ -127,7 +164,18 @@ const Contact = () => {
                     >
                       Last Name
                     </label>
-                    <Input id="lastName" placeholder="Doe" required />
+                    <Input
+                      id="lastName"
+                      placeholder="Doe"
+                      {...register("lastName", {
+                        required: "Last Name is required",
+                      })}
+                    />
+                    {errors.lastName && (
+                      <p className="text-red-500 text-sm">
+                        {errors.lastName.message}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -142,8 +190,13 @@ const Contact = () => {
                     id="email"
                     type="email"
                     placeholder="john@example.com"
-                    required
+                    {...register("email", { required: "Email is required" })}
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -153,7 +206,11 @@ const Contact = () => {
                   >
                     Company (Optional)
                   </label>
-                  <Input id="company" placeholder="Your Company Name" />
+                  <Input
+                    id="company"
+                    placeholder="Your Company Name"
+                    {...register("company")}
+                  />
                 </div>
 
                 <div>
@@ -166,18 +223,23 @@ const Contact = () => {
                   <select
                     id="service"
                     className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                    required
+                    {...register("service", {
+                      required: "Service selection is required",
+                    })}
                   >
                     <option value="">Select a service</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="mobile-development">
+                    <option value="Web Development">Web Development</option>
+                    <option value="Mobile App Development">
                       Mobile App Development
                     </option>
-                    <option value="cloud-solutions">Cloud Solutions</option>
-                    <option value="cybersecurity">Cybersecurity</option>
-                    <option value="data-analytics">Data Analytics</option>
-                    <option value="it-consulting">IT Consulting</option>
+                    <option value="Cloud Solutions">Cloud Solutions</option>
+                    <option value="IT Consulting">IT Consulting</option>
                   </select>
+                  {errors.service && (
+                    <p className="text-red-500 text-sm">
+                      {errors.service.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -191,8 +253,15 @@ const Contact = () => {
                     id="message"
                     placeholder="Tell us about your project requirements, timeline, and any specific needs..."
                     rows={4}
-                    required
+                    {...register("message", {
+                      required: "Message is required",
+                    })}
                   />
+                  {errors.message && (
+                    <p className="text-red-500 text-sm">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </div>
 
                 <Button
@@ -200,9 +269,10 @@ const Contact = () => {
                   variant="hero"
                   size="lg"
                   className="w-full"
+                  disabled={loading || isSubmitting}
                 >
                   <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  {loading ? "Submitting..." : "Send Message"}
                 </Button>
               </form>
             </div>
