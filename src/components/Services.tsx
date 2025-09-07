@@ -43,7 +43,10 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="p-10 bg-gray-100 min-h-screen flex flex-col items-center">
+    <div
+      id="services"
+      className="p-10 bg-gray-100 min-h-screen flex flex-col items-center"
+    >
       <h2 className="text-3xl font-bold mb-8 text-center">
         Our Mission & Services
       </h2>
