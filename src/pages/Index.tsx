@@ -7,6 +7,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Technologies2 from "@/components/Technologies2";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <About />
       <Services />
       {/* <Technologies /> */}
+      <WhyChooseUs />
       <Technologies2 />
       <Projects />
       {/* <div className="text-center mb-8 bg-blue-50 py-8">

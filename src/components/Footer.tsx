@@ -173,7 +173,7 @@ const Footer = () => {
               <p className="text-muted-foreground text-sm mb-4 md:mb-0">
                 © 2025 MK Infotech. All rights reserved.
               </p>
-              <div className="flex space-x-6 text-sm text-muted-foreground">
+              {/* <div className="flex space-x-6 text-sm text-muted-foreground">
                 <a href="#" className="hover:text-foreground transition-colors">
                   Privacy Policy
                 </a>
@@ -183,7 +183,7 @@ const Footer = () => {
                 <a href="#" className="hover:text-foreground transition-colors">
                   Cookies
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

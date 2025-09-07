@@ -9,7 +9,8 @@ const Projects = () => {
     {
       id: 1,
       title: "E-Commerce Platform",
-      description: "A comprehensive e-commerce solution with advanced features including inventory management, payment processing, and analytics dashboard.",
+      description:
+        "A comprehensive e-commerce solution with advanced features including inventory management, payment processing, and analytics dashboard.",
       image: project1Image,
       technologies: ["React JS", "Node JS", "MongoDB", "Next JS"],
       category: "Web Development",
@@ -18,13 +19,14 @@ const Projects = () => {
         "Real-time inventory tracking",
         "Multi-payment gateway integration",
         "Advanced analytics dashboard",
-        "Mobile-responsive design"
-      ]
+        "Mobile-responsive design",
+      ],
     },
     {
       id: 2,
       title: "Business Management App",
-      description: "Mobile application for business management with CRM capabilities, task management, and team collaboration features.",
+      description:
+        "Mobile application for business management with CRM capabilities, task management, and team collaboration features.",
       image: project2Image,
       technologies: ["React Native", "Node JS", "MongoDB", "Java"],
       category: "Mobile Development",
@@ -33,13 +35,14 @@ const Projects = () => {
         "Cross-platform compatibility",
         "Real-time collaboration",
         "Cloud data synchronization",
-        "Offline mode support"
-      ]
+        "Offline mode support",
+      ],
     },
     {
       id: 3,
       title: "Enterprise Web Application",
-      description: "Full-stack enterprise solution with advanced reporting, user management, and real-time data processing capabilities.",
+      description:
+        "Full-stack enterprise solution with advanced reporting, user management, and real-time data processing capabilities.",
       image: project3Image,
       technologies: ["Next JS", "Java", "SQL", "React JS"],
       category: "Enterprise Solutions",
@@ -48,9 +51,9 @@ const Projects = () => {
         "Advanced reporting system",
         "Role-based access control",
         "Real-time data processing",
-        "Scalable architecture"
-      ]
-    }
+        "Scalable architecture",
+      ],
+    },
   ];
 
   return (
@@ -62,19 +65,20 @@ const Projects = () => {
               Our Projects
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Showcasing our latest work and successful project implementations across various industries.
+              Showcasing our latest work and successful project implementations
+              across various industries.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {projects.map((project) => (
-              <div 
+              <div
                 key={project.id}
                 className="bg-card rounded-lg shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group"
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -84,33 +88,44 @@ const Projects = () => {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
                   <div className="flex items-center text-sm text-muted-foreground mb-3">
                     <Calendar className="w-4 h-4 mr-2" />
                     {project.date}
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-foreground mb-3">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
-                  
+
+                  <h3 className="text-xl font-bold text-foreground mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {project.description}
+                  </p>
+
                   <div className="mb-4">
-                    <h4 className="font-semibold text-foreground mb-2">Key Features:</h4>
+                    <h4 className="font-semibold text-foreground mb-2">
+                      Key Features:
+                    </h4>
                     <ul className="space-y-1">
                       {project.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm text-muted-foreground">
+                        <li
+                          key={index}
+                          className="flex items-center text-sm text-muted-foreground"
+                        >
                           <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="mb-6">
-                    <h4 className="font-semibold text-foreground mb-3">Technologies Used:</h4>
+                    <h4 className="font-semibold text-foreground mb-3">
+                      Technologies Used:
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, index) => (
-                        <span 
+                        <span
                           key={index}
                           className="bg-gradient-primary text-white px-3 py-1.5 rounded-full text-xs font-medium shadow-subtle hover:shadow-medium transition-all duration-300"
                         >
@@ -119,8 +134,8 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
-                  
-                  <div className="flex gap-3">
+
+                  {/* <div className="flex gap-3">
                     <Button variant="default" size="sm" className="flex-1">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       View Live
@@ -128,17 +143,17 @@ const Projects = () => {
                     <Button variant="outline" size="sm">
                       <Github className="w-4 h-4" />
                     </Button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
           </div>
-          
-          <div className="text-center mt-12">
+
+          {/* <div className="text-center mt-12">
             <Button variant="professional" size="lg">
               View All Projects
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
