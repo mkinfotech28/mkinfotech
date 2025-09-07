@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Technologies2 from "@/components/Technologies2";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import OurApproach from "@/components/OurApproach";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Services />
       {/* <Technologies /> */}
       <WhyChooseUs />
+      <OurApproach />
       <Technologies2 />
       <Projects />
       {/* <div className="text-center mb-8 bg-blue-50 py-8">
