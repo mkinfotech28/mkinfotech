@@ -21,11 +21,11 @@ const Technologies2 = () => {
     { name: "SQLite", icon: Server },
     { name: "React Native", icon: Activity },
     { name: "Next.js", icon: Box },
-    { name: "Ionic", icon: Cloud },
+    { name: "Material UI", icon: Cloud },
     { name: "Flutter", icon: Cpu },
     { name: "Machine Learning", icon: Lock },
     { name: "Node.js", icon: FileText },
-    { name: "Python", icon: Code },
+    { name: "Typescript", icon: Code },
     { name: "React.js", icon: Feather },
   ];
   return (
