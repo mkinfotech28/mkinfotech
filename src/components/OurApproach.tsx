@@ -35,7 +35,9 @@ const OurApproach = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* Left Text Section */}
         <div className="md:w-1/2 text-center md:text-left space-y-6">
-          <h2 className="text-3xl font-bold text-gray-800">Our Approach</h2>
+          <h2 className="text-xl md:text-3xl font-bold text-gray-800">
+            Our Approach
+          </h2>
           <p className="text-gray-600 text-lg">
             We believe that technology should drive growth, efficiency, and
             innovation. Our approach combines strategic insight, expert

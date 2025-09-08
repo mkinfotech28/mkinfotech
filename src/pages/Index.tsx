@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import Technologies2 from "@/components/Technologies2";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import OurApproach from "@/components/OurApproach";
+import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <OurApproach />
       <Technologies2 />
       <Projects />
+      <Testimonials />
       {/* <div className="text-center mb-8 bg-blue-50 py-8">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
           Why Hire Us?

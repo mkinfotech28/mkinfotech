@@ -22,9 +22,9 @@ const services = [
     icon: Cloud,
   },
   {
-    title: "Cybersecurity",
+    title: "Website Maintenance",
     description:
-      "Protecting your digital assets with cutting-edge security solutions and proactive monitoring.",
+      "Keeping your website secure, updated, and performing at its best — hassle-free maintenance for lasting growth.",
     icon: Lock,
   },
   {
@@ -47,8 +47,8 @@ const Services = () => {
       id="services"
       className="p-10 bg-gray-100 min-h-screen flex flex-col items-center"
     >
-      <h2 className="text-3xl font-bold mb-8 text-center">
-        Our Mission & Services
+      <h2 className="text-xl md:text-3xl font-bold mb-8 text-center">
+        Our Services
       </h2>
 
       <div className="max-w-4xl text-center mb-12 px-4">

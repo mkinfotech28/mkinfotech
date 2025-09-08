@@ -77,7 +77,7 @@ const Footer = () => {
                     href="#"
                     className="hover:text-foreground transition-colors"
                   >
-                    Cloud Solutions
+                    Website Maintenance
                   </a>
                 </li>
                 <li>
@@ -118,22 +118,7 @@ const Footer = () => {
                     Our Work
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Blog
-                  </a>
-                </li>
+
                 <li>
                   <a
                     href="#contact"

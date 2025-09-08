@@ -74,17 +74,19 @@ const Hero = () => {
 
             <div className="flex flex-col items-center p-6 bg-card rounded-lg shadow-medium hover:shadow-large transition-all duration-300">
               <Shield className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Website Development
+              </h3>
               <p className="text-muted-foreground text-center">
-                Comprehensive security solutions to protect your digital assets
+                Comprehensive website solutions according to your need
               </p>
             </div>
 
             <div className="flex flex-col items-center p-6 bg-card rounded-lg shadow-medium hover:shadow-large transition-all duration-300">
               <Zap className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Cloud Solutions</h3>
+              <h3 className="text-xl font-semibold mb-2">IT Consulting</h3>
               <p className="text-muted-foreground text-center">
-                Scalable cloud infrastructure and migration services
+                Expert advice and strategic planning for smooth development
               </p>
             </div>
           </div>
