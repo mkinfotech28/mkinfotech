@@ -9,13 +9,13 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-subtle">
-      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
+      <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <div className="w-20 h-20  rounded-lg flex items-center justify-center">
+          <div className="w-24 h-24  rounded-lg flex items-center justify-center">
             <img
               src={logo}
               alt="MK Infotech"
-              className="w-20 h-20 rounded-lg object-contain"
+              className="w-24 h-24 rounded-lg object-contain"
             />
           </div>
           {/* <span className="text-xl font-bold text-foreground">MK Infotech</span> */}
