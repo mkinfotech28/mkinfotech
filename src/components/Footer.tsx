@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Facebook } from "lucide-react";
 import logo from "../assets/logo2.png";
 
 const Footer = () => {
@@ -29,22 +29,22 @@ const Footer = () => {
                 >
                   <Github className="w-5 h-5" />
                 </a> */}
-                <a
+                {/* <a
                   href="#"
                   className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
-                </a>
+                </a> */}
                 <a
                   href="#"
                   className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors"
                   aria-label="Twitter"
                 >
-                  <Twitter className="w-5 h-5" />
+                  <Facebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="mailto:mkinfotech28@gmail.com"
                   className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors"
                   aria-label="Email"
                 >

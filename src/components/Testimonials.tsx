@@ -2,24 +2,24 @@ import { MessageSquare, Star, StarIcon } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Samantha",
     role: "Marketing Manager",
     feedback:
-      "MK INFOTECH transformed our online presence. Their solutions are efficient, reliable, and tailored to our needs. Highly recommended!",
+      "Fantastic experience! The team was professional, efficient, and really understood our needs. Highly recommended.",
     rating: 5,
   },
   {
-    name: "James Anderson",
+    name: "Hilal Ahmed Butt",
     role: "Entrepreneur",
     feedback:
-      "The team is professional and responsive. Our website maintenance and support have never been smoother!",
+      "I had the privilege of working with Ms. Manjot and her company on my app’s development. Their professionalism, dedication, and attention to detail made the process seamless and successful.I wholeheartedly recommend her and her team to anyone seeking a dependable, skilled, and quality-driven development partner.",
     rating: 4,
   },
   {
-    name: "Emily Davis",
-    role: "Small Business Owner",
+    name: "Ravinder Kumar",
+    role: "Business Owner",
     feedback:
-      "Their expert guidance helped us scale quickly and maintain consistent uptime. Excellent service and support!",
+      "Working with this team has been a game-changer for our business. Their expertise, attention to detail, and commitment to delivering results exceeded our expectations. The communication was seamless and the final product looks and performs even better than we imagined. I highly recommend them to anyone looking for a reliable and innovative partner.",
     rating: 5,
   },
 ];

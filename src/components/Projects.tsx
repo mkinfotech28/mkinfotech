@@ -1,68 +1,80 @@
 import { ExternalLink, Github, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import project1Image from "@/assets/project1.jpg";
-import project2Image from "@/assets/project2.jpg";
+import project1Image from "@/assets/em.jpeg";
+import project2Image from "@/assets/jsj.png";
 import project3Image from "@/assets/project3.jpg";
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Emirouq",
       description:
-        "A comprehensive e-commerce solution with advanced features including inventory management, payment processing, and analytics dashboard.",
+        "A comprehensive e-commerce olx like solution with advanced features including buy and sell, payment processing, and analytics dashboard.",
       image: project1Image,
-      technologies: ["React JS", "Node JS", "MongoDB", "Next JS"],
-      category: "Web Development",
+      technologies: [
+        "React JS",
+        "Node JS",
+        "MongoDB",
+        "Next JS",
+        "React Native",
+      ],
+      category: "App Development",
       date: "2024",
       features: [
-        "Real-time inventory tracking",
-        "Multi-payment gateway integration",
-        "Advanced analytics dashboard",
+        "Buy and Sell your products",
+        "Live Chat with sellers",
+        "Subscription based Ad Posting",
         "Mobile-responsive design",
       ],
     },
     {
       id: 2,
-      title: "Business Management App",
+      title: "JSJ Credit Corporation",
       description:
-        "Mobile application for business management with CRM capabilities, task management, and team collaboration features.",
-      image: project2Image,
-      technologies: ["React Native", "Node JS", "MongoDB", "Java"],
-      category: "Mobile Development",
+        "Web and Mobile applications for loan management system with staff, branches and multiple functionalities.",
+      image: "https://jaisaiji-f5c0c.web.app/static/finalLogo.004b7148.jpg",
+      technologies: [
+        "React Native",
+        "Node JS",
+        "MongoDB",
+        "Java",
+        "Ant Design",
+      ],
+      category: "Web and Mobile Development",
       date: "2024",
       features: [
         "Cross-platform compatibility",
         "Real-time collaboration",
-        "Cloud data synchronization",
+        "Integration with customer and admin mobile app",
         "Offline mode support",
       ],
     },
-    {
-      id: 3,
-      title: "Enterprise Web Application",
-      description:
-        "Full-stack enterprise solution with advanced reporting, user management, and real-time data processing capabilities.",
-      image: project3Image,
-      technologies: ["Next JS", "Java", "SQL", "React JS"],
-      category: "Enterprise Solutions",
-      date: "2024",
-      features: [
-        "Advanced reporting system",
-        "Role-based access control",
-        "Real-time data processing",
-        "Scalable architecture",
-      ],
-    },
+    // {
+    //   id: 3,
+    //   title: "Enterprise Web Application",
+    //   description:
+    //     "Full-stack enterprise solution with advanced reporting, user management, and real-time data processing capabilities.",
+    //   image: project3Image,
+    //   technologies: ["Next JS", "Java", "SQL", "React JS"],
+    //   category: "Enterprise Solutions",
+    //   date: "2024",
+    //   features: [
+    //     "Advanced reporting system",
+    //     "Role-based access control",
+    //     "Real-time data processing",
+    //     "Scalable architecture",
+    //   ],
+    // },
   ];
 
   return (
     <section id="projects" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-xl md:text-3xl font-bold text-foreground mb-6">
-              Our Projects
+              Our Portfolio
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Showcasing our latest work and successful project implementations
@@ -70,17 +82,17 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-card rounded-lg shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group"
+                className="w-full max-w-3xl bg-card rounded-lg shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group"
               >
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
@@ -134,26 +146,10 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
-
-                  {/* <div className="flex gap-3">
-                    <Button variant="default" size="sm" className="flex-1">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      View Live
-                    </Button>
-                    <Button variant="outline" size="sm">
-                      <Github className="w-4 h-4" />
-                    </Button>
-                  </div> */}
                 </div>
               </div>
             ))}
           </div>
-
-          {/* <div className="text-center mt-12">
-            <Button variant="professional" size="lg">
-              View All Projects
-            </Button>
-          </div> */}
         </div>
       </div>
     </section>

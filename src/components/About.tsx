@@ -78,13 +78,13 @@ const About = () => {
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-card p-6 rounded-lg shadow-medium text-center">
                 <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h4 className="text-2xl font-bold text-foreground mb-2">25+</h4>
+                <h4 className="text-2xl font-bold text-foreground mb-2">10+</h4>
                 <p className="text-muted-foreground">Happy Clients</p>
               </div>
 
               <div className="bg-card p-6 rounded-lg shadow-medium text-center">
                 <Trophy className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h4 className="text-2xl font-bold text-foreground mb-2">50+</h4>
+                <h4 className="text-2xl font-bold text-foreground mb-2">20+</h4>
                 <p className="text-muted-foreground">Projects Completed</p>
               </div>
 
