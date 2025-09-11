@@ -88,7 +88,7 @@ const Projects = () => {
                 key={project.id}
                 className="w-full max-w-3xl bg-card rounded-lg shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group"
               >
-                <div className="relative overflow-hidden">
+                {/* <div className="relative overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -99,13 +99,13 @@ const Projects = () => {
                       {project.category}
                     </span>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="p-6">
-                  <div className="flex items-center text-sm text-muted-foreground mb-3">
+                  {/* <div className="flex items-center text-sm text-muted-foreground mb-3">
                     <Calendar className="w-4 h-4 mr-2" />
                     {project.date}
-                  </div>
+                  </div> */}
 
                   <h3 className="text-xl font-bold text-foreground mb-3">
                     {project.title}

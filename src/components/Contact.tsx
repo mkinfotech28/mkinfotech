@@ -232,7 +232,7 @@ const Contact = () => {
                     <option value="Mobile App Development">
                       Mobile App Development
                     </option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
                     <option value="IT Consulting">IT Consulting</option>
                   </select>
                   {errors.service && (

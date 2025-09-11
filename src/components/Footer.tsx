@@ -36,13 +36,13 @@ const Footer = () => {
                 >
                   <Linkedin className="w-5 h-5" />
                 </a> */}
-                <a
+                {/* <a
                   href="#"
                   className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors"
                   aria-label="Twitter"
                 >
                   <Facebook className="w-5 h-5" />
-                </a>
+                </a> */}
                 <a
                   href="mailto:mkinfotech28@gmail.com"
                   className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors"
@@ -107,7 +107,7 @@ const Footer = () => {
                     href="#about"
                     className="hover:text-foreground transition-colors"
                   >
-                    About Us
+                    About
                   </a>
                 </li>
                 <li>

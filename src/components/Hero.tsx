@@ -78,7 +78,7 @@ const Hero = () => {
                 Website Development
               </h3>
               <p className="text-muted-foreground text-center">
-                Comprehensive website solutions according to your need
+                Comprehensive website solutions according to your needs
               </p>
             </div>
 
