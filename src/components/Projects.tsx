@@ -50,6 +50,22 @@ const Projects = () => {
         "Offline mode support",
       ],
     },
+    {
+      id: 3,
+      title: "Ea8 & Fly",
+      description:
+        "Invoicing admin software for airport outlets with offline data syncing.",
+      image: "https://eatandfly-a34cb.web.app/",
+      technologies: ["React JS", "Node JS", "MongoDB", "Material UI", "AWS"],
+      category: "Web Development",
+      date: "2026",
+      features: [
+        "Offline data syncing",
+        "Multiple brances and staff roles",
+        "Real-time collaboration",
+        "Cross-platform compatibility",
+      ],
+    },
     // {
     //   id: 3,
     //   title: "Enterprise Web Application",
@@ -71,7 +87,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-xl md:text-3xl font-bold text-foreground mb-6">
               Our Portfolio
@@ -82,7 +98,7 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
             {projects.map((project) => (
               <div
                 key={project.id}

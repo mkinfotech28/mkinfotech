@@ -2,8 +2,8 @@ import { MessageSquare, Star, StarIcon } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Samantha",
-    role: "Marketing Manager",
+    name: "Jaskirat Singh",
+    role: "Buisness Owner",
     feedback:
       "Fantastic experience! The team was professional, efficient, and really understood our needs. Highly recommended.",
     rating: 5,
@@ -65,7 +65,7 @@ const Testimonials = () => {
                 {Array.from({ length: testimonial.rating }).map(
                   (_, starIndex) => (
                     <Star key={starIndex} className="w-4 h-4 text-yellow-400" />
-                  )
+                  ),
                 )}
               </div>
             </div>
