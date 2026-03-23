@@ -2,7 +2,7 @@ import { MessageSquare, Star, StarIcon } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Jaskirat Singh",
+    name: "Anmoldeep Singh",
     role: "Buisness Owner",
     feedback:
       "Fantastic experience! The team was professional, efficient, and really understood our needs. Highly recommended.",
