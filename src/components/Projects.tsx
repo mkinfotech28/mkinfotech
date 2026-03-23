@@ -61,7 +61,7 @@ const Projects = () => {
       date: "2026",
       features: [
         "Offline data syncing",
-        "Multiple brances and staff roles",
+        "Multiple branches and staff roles",
         "Real-time collaboration",
         "Cross-platform compatibility",
       ],
